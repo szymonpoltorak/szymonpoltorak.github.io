@@ -1,0 +1,30 @@
+<div class="flex flex-col items-center justify-center bg-[#21242c] h-[75%] gap-8">
+    <div id="projects" class="font-bold text-[4rem] hide">Latest <span
+        class="text-[#7ce7fc] font-extrabold">Projects</span></div>
+
+    <div class="flex justify-center items-center gap-24 w-full p-6 hide">
+
+        @for (project of projects; track project) {
+            <div class="flex flex-col justify-evenly items-center gap-2 bg-[#343845] rounded-2xl w-[40rem] h-[40rem]">
+                <div class="flex justify-center items-center flex-col font-semibold text-[2rem] p-2">
+                    <span class="font-semibold text-[2rem]">{{ project.title }}</span>
+                    <div class="font-light text-sm">
+                        {{ project.startDate }}
+                        - {{ project.endDate === null ? 'Present' : project.endDate | date: 'MMMM yyyy' }}
+                    </div>
+                </div>
+
+                <img alt="{{ project.title }}"
+                     [src]="project.imageLink">
+
+                <div class="font-semibold pt-2 pl-4 pr-4 text-justify">{{ project.description }}</div>
+
+                <div class="flex items-center justify-center pb-4">
+                    <button extended mat-fab>
+                        <a href="{{ project.githubLink }}" target="_blank">Read more</a>
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+</div>

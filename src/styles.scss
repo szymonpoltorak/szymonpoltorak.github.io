@@ -11,6 +11,7 @@ html {
         typography: Quicksand,
         density: 0,
     ));
+    scroll-behavior: smooth;
 }
 
 html, body {
@@ -24,4 +25,110 @@ body {
     min-height: 100vh;
     font-family: Quicksand, "Helvetica Neue", sans-serif;
     color: white
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #7ce7fc;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -12px;
+    background-color: #7ce7fc;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50.3%;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: #21242c;
+    position: relative;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .container::before {
+        left: 60px;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #7ce7fc transparent transparent;
+    }
+
+    .left::after, .right::after {
+        left: 15px;
+    }
+
+    .right {
+        left: 0;
+    }
+}
+
+.hide {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateY(30%);
+    transition: all 1.25s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hide {
+        transition: none;
+    }
 }

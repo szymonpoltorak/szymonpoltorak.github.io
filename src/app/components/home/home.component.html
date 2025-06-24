@@ -1,0 +1,62 @@
+<div class="bg-[#21242c] flex flex-col h-screen" xmlns="http://www.w3.org/1999/html">
+    <app-nav-bar></app-nav-bar>
+
+    <div class="flex-1 flex justify-center items-center px-[10rem] gap-8">
+
+        <div class="flex flex-col gap-4 max-w-[50%]">
+            <div class="text-white text-[2.5rem] font-bold">
+                Hi!
+            </div>
+
+            <div class="text-[3rem]">
+                <span class="text-[#7ce7fc] font-extrabold">Szymon Półtorak</span>
+            </div>
+
+            <div class="flex items-center text-white text-[2.5rem] font-mono">
+                I'm a&nbsp;
+                <span class="relative inline-block whitespace-nowrap font-semibold text-[#7ce7fc] font-mono">
+                    {{ typed }}<span class="cursor-blink ml-1">|</span>
+                </span>
+            </div>
+
+            <div class="flex flex-start gap-4">
+                <a mat-mini-fab aria-label="Linkedin" matTooltip="Contact me on Linkedin"
+                   [matTooltipPosition]="'above'" [matTooltipShowDelay]="500"
+                   href="https://www.linkedin.com/in/szymon-poltorak" target="_blank">
+                    <ng-icon name="bootstrapLinkedin"/>
+                </a>
+
+                <a mat-mini-fab aria-label="Github" matTooltip="See my github projects"
+                   [matTooltipPosition]="'above'" [matTooltipShowDelay]="500"
+                   href="https://github.com/szymonpoltorak" target="_blank">
+                    <ng-icon name="bootstrapGithub"/>
+                </a>
+
+                <a mat-mini-fab aria-label="Mail Me" matTooltip="Send me an email"
+                   [matTooltipPosition]="'above'" [matTooltipShowDelay]="500"
+                   href="mailto:szymonpotorak@gmail.com">
+                    <mat-icon>mail</mat-icon>
+                </a>
+            </div>
+
+            <div>
+                <a mat-fab extended aria-label="CV" matTooltip="Check out my CV"
+                   href="assets/Szymon_Poltorak_FullStack_Java_Angular.pdf"
+                   [matTooltipPosition]="'above'" [matTooltipShowDelay]="500" target="_blank">
+                    <mat-icon>attach_file</mat-icon>
+
+                    Checkout my CV
+                </a>
+            </div>
+        </div>
+
+        <div
+            class="flex justify-end items-end border-6 rounded-full solid border-[#7ce7fc] overflow-hidden bg-[#7ce7fc] shadow-xl shadow-[#7ce7fc]">
+            <img
+                src="assets/photo.png"
+                alt="Profile image"
+                class="object-cover"
+            />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="flex flex-col items-center justify-center bg-[#343845] h-screen gap-8">
+    <div id="education" class="font-bold text-[4rem] hide">Education & <span class="text-[#7ce7fc] font-extrabold">Certifications</span>
+    </div>
+
+    <div class="timeline w-full h-[80%] hide">
+        @for (education of educations; track education) {
+            <div class="container" [ngClass]="education.positionClass">
+                <div class="flex justify-evenly bg-[#21242c] rounded-2xl p-8 gap-6">
+                    <div class="w-[74px] h-[74px] bg-white flex items-center p-2 justify-center rounded-2xl">
+                        <a [href]="education.siteLink" target="_blank" [matTooltipShowDelay]="500"
+                           matTooltip="{{ education.subtitle }} site">
+                            <img
+                                [src]="education.imageLink"
+                                alt="{{ education.subtitle }} logo"
+                                class="max-w-[74px] max-h-[74px] object-contain rounded-xl"/>
+                        </a>
+                    </div>
+
+
+                    <div class="flex flex-col gap-2 max-w-[30rem]">
+                        <div>
+                            <div class="font-semibold">{{ education.title }}</div>
+
+                            <div class="font-sm">
+                                {{ education.subtitle }}
+                            </div>
+
+                            <div class="font-light">
+                                {{ education.startDate }}- {{ education.endDate }}
+                            </div>
+                        </div>
+
+                        @if (education.description.length !== 0) {
+                            <div class="text-justify text-sm">{{ education.description }}</div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
