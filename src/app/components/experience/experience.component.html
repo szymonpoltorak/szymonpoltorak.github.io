@@ -27,7 +27,7 @@
                             <div class="font-light">
                                 {{ exp.startDate | date: 'MMMM yyyy' }}
                                 - {{ exp.endDate === null ? 'Present' : exp.endDate | date: 'MMMM yyyy' }}
-                                - {{ formatDurationSince(exp.startDate) }}
+                                - {{ formatDurationSince(exp) }}
                             </div>
                             <div class="font-light">{{ exp.location }}</div>
                         </div>

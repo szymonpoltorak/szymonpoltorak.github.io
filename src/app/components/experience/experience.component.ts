@@ -51,9 +51,9 @@ export class ExperienceComponent {
         }
     ];
 
-    formatDurationSince(dateString: string): string {
-        const start: Date = new Date(dateString);
-        const now: Date = new Date();
+    formatDurationSince(experience: WorkExperience): string {
+        const start: Date = new Date(experience.startDate);
+        const now: Date = experience.endDate === null ? new Date() : new Date(experience.endDate);
 
         let years: number = now.getFullYear() - start.getFullYear();
         let months: number = now.getMonth() - start.getMonth();
