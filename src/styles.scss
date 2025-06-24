@@ -11,7 +11,9 @@ html {
         typography: Quicksand,
         density: 0,
     ));
-    scroll-behavior: smooth;
+    & {
+        scroll-behavior: smooth;
+    }
 }
 
 html, body {

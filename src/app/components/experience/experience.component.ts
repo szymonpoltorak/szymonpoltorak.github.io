@@ -17,7 +17,7 @@ export class ExperienceComponent {
     workExperiences: WorkExperience[] = [
         {
             company: 'Essembli',
-            logo: 'https://media.licdn.com/dms/image/v2/C560BAQEvzj_T6gSK9w/company-logo_200_200/company-logo_200_200/0/1630634085716/essembli_logo?e=2147483647&v=beta&t=INF2X8ou4zdIOHgjmjfTb0h3aLcdRMR9VExvJyBszng',
+            logo: 'assets/essembli_logo.jpg',
             position: 'Junior Java Developer',
             startDate: '2023-10-01',
             location: 'Warszawa, Mazowieckie, Poland - Hybrid',
@@ -35,7 +35,7 @@ export class ExperienceComponent {
         },
         {
             company: 'Transbit Sp. z o.o.',
-            logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQH948mdffxdrg/company-logo_100_100/company-logo_100_100/0/1630562816723/transbit_logo?e=1756339200&v=beta&t=Y-pz9k7hxArK5vlAdjTSp7tVMUVSHAolDKXduwArRMM',
+            logo: 'assets/transbit_logo.jpg',
             position: 'DevOps Internship',
             startDate: '2023-07-01',
             location: 'Warszawa, Mazowieckie, Poland - Hybrid',

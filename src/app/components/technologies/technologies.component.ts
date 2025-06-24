@@ -47,7 +47,7 @@ export class TechnologiesComponent {
         },
         {
             name: "Docker",
-            imageLink: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png"
+            imageLink: "assets/docker_logo.png"
         },
         {
             name: "Gradle",
