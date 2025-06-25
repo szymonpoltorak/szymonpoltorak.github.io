@@ -1,39 +1,40 @@
-<div class="flex flex-col items-center justify-center bg-secondary h-screen gap-8">
-    <div id="education" class="font-bold text-[4rem] hide">Education & <span class="text-primary font-extrabold">Certifications</span>
+<div class="flex flex-col items-center justify-center bg-secondary min-h-screen gap-8 p-3">
+    <div id="education" class="flex justify-center font-bold text-[4rem] max-laptop:text-[2rem] max-tabletLg:text-sm hide">
+        Education & &nbsp;<span class="text-primary font-extrabold">Certifications</span>
     </div>
 
     <div class="timeline w-full h-[80%] hide">
         @for (education of educations; track education) {
             <div class="container" [ngClass]="education.positionClass">
-                <div class="flex justify-evenly bg-tertiary rounded-2xl p-8 gap-6">
-                    <div class="w-[74px] h-[74px] bg-white flex items-center p-2 justify-center rounded-2xl">
-                        <a [href]="education.siteLink" target="_blank" [matTooltipShowDelay]="500"
-                           matTooltip="{{ education.subtitle }} site">
-                            <img
-                                [src]="education.imageLink"
-                                alt="{{ education.subtitle }} logo"
-                                class="max-w-[74px] max-h-[74px] object-contain rounded-xl"/>
-                        </a>
-                    </div>
+                <div class="flex flex-col bg-tertiary rounded-2xl p-8 max-md:p-4 gap-6">
+                    <div class="flex justify-evenly gap-6">
+                        <div class="flex flex-col items-center p-2 justify-center">
+                            <a [href]="education.siteLink" target="_blank" [matTooltipShowDelay]="500"
+                               class="max-w-[74px] max-h-[74px] max-sm:w-[48px] max-sm:max-h-[48px] bg-white rounded-2xl"
+                               matTooltip="{{ education.subtitle }} site">
+                                <img
+                                    [src]="education.imageLink"
+                                    alt="{{ education.subtitle }} logo"
+                                    class="max-w-[74px] max-h-[74px] max-sm:w-[48px] max-sm:max-h-[48px] object-contain rounded-xl"/>
+                            </a>
+                        </div>
 
+                        <div class="flex flex-col max-w-[30rem]">
+                            <div class="font-semibold max-sm:text-xs">{{ education.title }}</div>
 
-                    <div class="flex flex-col gap-2 max-w-[30rem]">
-                        <div>
-                            <div class="font-semibold">{{ education.title }}</div>
-
-                            <div class="font-sm">
+                            <div class="font-sm max-sm:text-xs">
                                 {{ education.subtitle }}
                             </div>
 
-                            <div class="font-light">
+                            <div class="font-light max-laptop:text-sm max-sm:text-xs">
                                 {{ education.startDate }}- {{ education.endDate }}
                             </div>
                         </div>
-
-                        @if (education.description.length !== 0) {
-                            <div class="text-justify text-sm">{{ education.description }}</div>
-                        }
                     </div>
+
+                    @if (education.description.length !== 0) {
+                        <div class="text-justify text-sm max-laptop:text-xs p-3">{{ education.description }}</div>
+                    }
                 </div>
             </div>
         }
