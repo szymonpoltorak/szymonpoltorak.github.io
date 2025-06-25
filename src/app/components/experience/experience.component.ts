@@ -38,7 +38,7 @@ export class ExperienceComponent {
             logo: 'assets/transbit_logo.jpg',
             position: 'DevOps Internship',
             startDate: '2023-07-01',
-            location: 'Warszawa, Mazowieckie, Poland - Hybrid',
+            location: 'Warszawa, Mazowieckie, Poland - On site',
             descriptions: [
                 'Implemented and optimized CI/CD pipelines.',
                 'Built and optimized Docker containers for deployment efficiency.',

@@ -1,43 +1,51 @@
-<div class="flex flex-col items-center justify-center bg-secondary h-[80%] gap-8">
-    <div id="experience" class="font-bold text-[4rem] hide">Work <span
-        class="text-primary font-extrabold">Experience</span></div>
+<div class="flex flex-col items-center justify-center bg-secondary min-h-[80%] gap-8 max-navbarMax:gap-4 p-3">
+    <div id="experience" class="font-bold text-[4rem] max-laptop:text-[2rem] hide">
+        Work <span class="text-primary font-extrabold">Experience</span>
+    </div>
 
-    <div class="timeline w-full h-[80%] hide">
+    <div class="timeline w-full min-h-[80%] hide">
         @for (exp of workExperiences; track exp) {
             <div class="container" [ngClass]="exp.positionClass">
-                <div class="flex justify-evenly bg-tertiary rounded-2xl p-8 gap-6">
-                    <div class="w-[74px] h-[74px] bg-white flex items-center justify-center rounded-xl">
-                        <a [href]="exp.companySiteLink" [matTooltipShowDelay]="500" matTooltip="{{ exp.company }} site"
-                           target="_blank">
-                            <img
-                                [src]="exp.logo"
-                                alt="{{ exp.company }} logo"
-                                class="max-w-[74px] max-h-[74px] object-contain rounded-xl"/>
-                        </a>
-                    </div>
+                <div class="flex flex-col bg-tertiary rounded-2xl p-8 max-navbarMax:p-4 gap-2">
+                    <div class="flex justify-evenly gap-4">
+                        <div class="flex flex-col items-center justify-center">
+                            <a [href]="exp.companySiteLink" [matTooltipShowDelay]="500"
+                               matTooltip="{{ exp.company }} site"
+                               class="max-w-[74px] max-h-[74px] bg-white rounded-xl"
+                               target="_blank">
+                                <img
+                                    [src]="exp.logo"
+                                    alt="{{ exp.company }} logo"
+                                    class="max-w-[74px] max-h-[74px] max-sm:w-[48px] max-sm:max-h-[48px] object-contain rounded-xl"/>
+                            </a>
+                        </div>
 
-                    <div class="flex flex-col gap-2 max-w-[30rem] ">
-                        <div>
-                            <div class="font-semibold">{{ exp.position }}</div>
+                        <div class="flex flex-col gap-2 max-w-[30rem] ">
+                            <div class="font-semibold max-sm:text-xs">
+                                {{ exp.position }}
+                            </div>
 
-                            <div class="font-semibold">
+                            <div class="font-semibold max-sm:text-xs">
                                 {{ exp.company }}
                             </div>
 
-                            <div class="font-light">
+                            <div class="font-light max-laptop:text-sm max-sm:text-xs">
                                 {{ exp.startDate | date: 'MMMM yyyy' }}
                                 - {{ exp.endDate === null ? 'Present' : exp.endDate | date: 'MMMM yyyy' }}
                                 - {{ formatDurationSince(exp) }}
                             </div>
-                            <div class="font-light">{{ exp.location }}</div>
-                        </div>
 
-                        <ul class="list-disc text-justify ">
-                            @for (desc of exp.descriptions; track desc) {
-                                <li>{{ desc }}</li>
-                            }
-                        </ul>
+                            <div class="font-light max-laptop:text-sm max-sm:text-xs">
+                                {{ exp.location }}
+                            </div>
+                        </div>
                     </div>
+
+                    <ul class="list-disc text-justify max-laptop:text-sm p-2">
+                        @for (desc of exp.descriptions; track desc) {
+                            <li>{{ desc }}</li>
+                        }
+                    </ul>
                 </div>
             </div>
         }
