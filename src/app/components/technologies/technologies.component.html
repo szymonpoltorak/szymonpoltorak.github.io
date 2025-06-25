@@ -1,13 +1,13 @@
-<div class="bg-[#21242c] flex flex-col justify-center items-center p-12">
-    <div id="technologies" class="font-bold text-[4rem] hide">Used <span class="text-[#7ce7fc]">Technologies</span>
+<div class="bg-tertiary flex flex-col justify-center items-center p-12">
+    <div id="technologies" class="font-bold text-[4rem] hide">Used <span class="text-primary">Technologies</span>
     </div>
 
     <div class="grid gap-24 w-full p-12 hide"
          style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
 
         @for (card of techCards; track card) {
-            <div class="flex flex-col justify-evenly items-center gap-2 bg-[#343845] hover:bg-[#7ce7fc] hover:text-black hover:cursor-pointer
-                p-12 rounded-2xl min-w-48 min-h-48 hover:shadow-xl hover:shadow-[#7ce7fc]">
+            <div class="flex flex-col justify-evenly items-center gap-2 bg-secondary hover:bg-primary hover:text-black hover:cursor-pointer
+                p-12 rounded-2xl min-w-48 min-h-48 hover:shadow-xl hover:shadow-primary">
                 <img alt="{{ card.name }}"
                      width="100"
                      height="100"

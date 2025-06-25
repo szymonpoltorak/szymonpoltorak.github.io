@@ -1,11 +1,11 @@
-<div class="flex flex-col items-center justify-center bg-[#343845] h-[80%] gap-8">
+<div class="flex flex-col items-center justify-center bg-secondary h-[80%] gap-8">
     <div id="experience" class="font-bold text-[4rem] hide">Work <span
-        class="text-[#7ce7fc] font-extrabold">Experience</span></div>
+        class="text-primary font-extrabold">Experience</span></div>
 
     <div class="timeline w-full h-[80%] hide">
         @for (exp of workExperiences; track exp) {
             <div class="container" [ngClass]="exp.positionClass">
-                <div class="flex justify-evenly bg-[#21242c] rounded-2xl p-8 gap-6">
+                <div class="flex justify-evenly bg-tertiary rounded-2xl p-8 gap-6">
                     <div class="w-[74px] h-[74px] bg-white flex items-center justify-center rounded-xl">
                         <a [href]="exp.companySiteLink" [matTooltipShowDelay]="500" matTooltip="{{ exp.company }} site"
                            target="_blank">
