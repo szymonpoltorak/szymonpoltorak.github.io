@@ -1,5 +1,5 @@
-<div class="flex justify-evenly max-navbarMax:justify-between p-4 items-center">
-    <div class="font-bold text-[2rem] max-tabletLg:text-[1rem]">
+<nav class="flex justify-evenly max-navbarMax:justify-between p-4 w-full h-fit items-center top-0 fixed z-50 bg-tertiary">
+    <div class="font-bold text-[2rem] max-tabletLg:text-[1rem] hover:cursor-default">
         <span class="text-primary font-extrabold">My </span>Portfolio.
     </div>
 
@@ -8,14 +8,14 @@
             <button class="nav-button" matTooltip="About me" [matTooltipShowDelay]="500" mat-button>
                 <a href="#about">About</a>
             </button>
+            <button class="nav-button" matTooltip="Technologies I use" [matTooltipShowDelay]="500" mat-button>
+                <a href="#technologies">Technologies</a>
+            </button>
             <button class="nav-button" matTooltip="My work experience" [matTooltipShowDelay]="500" mat-button>
                 <a href="#experience">Experience</a>
             </button>
             <button class="nav-button" matTooltip="My projects" [matTooltipShowDelay]="500" mat-button>
                 <a href="#projects">Projects</a>
-            </button>
-            <button class="nav-button" matTooltip="Technologies I use" [matTooltipShowDelay]="500" mat-button>
-                <a href="#technologies">Technologies</a>
             </button>
             <button class="nav-button" matTooltip="Education history" [matTooltipShowDelay]="500" mat-button>
                 <a href="#education">Education</a>
@@ -30,18 +30,18 @@
             <button class="nav-button" matTooltip="About me" [matTooltipShowDelay]="500" mat-menu-item>
                 <a href="#about">About</a>
             </button>
+            <button class="nav-button" matTooltip="Technologies I use" [matTooltipShowDelay]="500" mat-menu-item>
+                <a href="#technologies">Technologies</a>
+            </button>
             <button class="nav-button" matTooltip="My work experience" [matTooltipShowDelay]="500" mat-menu-item>
                 <a href="#experience">Experience</a>
             </button>
             <button class="nav-button" matTooltip="My projects" [matTooltipShowDelay]="500" mat-menu-item>
                 <a href="#projects">Projects</a>
             </button>
-            <button class="nav-button" matTooltip="Technologies I use" [matTooltipShowDelay]="500" mat-menu-item>
-                <a href="#technologies">Technologies</a>
-            </button>
             <button class="nav-button" matTooltip="Education history" [matTooltipShowDelay]="500" mat-menu-item>
                 <a href="#education">Education</a>
             </button>
         </mat-menu>
     }
-</div>
+</nav>
