@@ -22,8 +22,26 @@
             </button>
         </div>
     } @else {
-        <button mat-mini-fab>
+        <button mat-mini-fab [matMenuTriggerFor]="menu">
             <mat-icon>menu</mat-icon>
         </button>
+
+        <mat-menu #menu="matMenu">
+            <button class="nav-button" matTooltip="About me" [matTooltipShowDelay]="500" mat-menu-item>
+                <a href="#about">About</a>
+            </button>
+            <button class="nav-button" matTooltip="My work experience" [matTooltipShowDelay]="500" mat-menu-item>
+                <a href="#experience">Experience</a>
+            </button>
+            <button class="nav-button" matTooltip="My projects" [matTooltipShowDelay]="500" mat-menu-item>
+                <a href="#projects">Projects</a>
+            </button>
+            <button class="nav-button" matTooltip="Technologies I use" [matTooltipShowDelay]="500" mat-menu-item>
+                <a href="#technologies">Technologies</a>
+            </button>
+            <button class="nav-button" matTooltip="Education history" [matTooltipShowDelay]="500" mat-menu-item>
+                <a href="#education">Education</a>
+            </button>
+        </mat-menu>
     }
 </div>
