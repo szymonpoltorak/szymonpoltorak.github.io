@@ -1,5 +1,7 @@
-<div class="flex items-center justify-center p-4 bg-secondary  h-[60%] gap-8">
-    <div class="flex rounded-full border-solid border-4 border-primary overflow-hidden hide">
+<div class="flex items-center justify-center max-tabletLg:flex-col p-4 bg-secondary h-[60%] gap-8">
+    <div class="flex rounded-full border-solid border-4 max-navbarMax:border-2 border-primary overflow-hidden
+        max-laptop:max-w-[35rem] max-laptop:max-h-[35rem] max-laptopSm:max-w-[20rem] max-laptopSm:max-h-[20rem]
+        max-tabletLg:max-w-[15rem] max-tabletLg:max-h-[15rem] max-navbarMax:max-w-[10rem] max-navbarMax:max-h-[10rem] hide">
         <img
             src="assets/photo.png"
             alt="Profile image"
@@ -7,10 +9,12 @@
         />
     </div>
 
-    <div class="max-w-[60rem] hide">
-        <div id="about" class="font-semibold text-[5rem]">About <span class="text-primary">Me</span></div>
+    <div class="max-w-[50rem] max-laptop:max-w-[40rem] hide">
+        <div id="about" class="font-semibold text-[5rem] max-laptop:text-[3rem] max-laptopSm:text-[2rem]">
+            About <span class="text-primary">Me</span>
+        </div>
 
-        <div class="text-justify">
+        <div class="text-justify max-laptopSm:text-[1rem] max-navbarMax:text-sm">
             Passionate Fullstack Developer specializing in Java (Spring Boot) and Angular.
             Currently a first-year Applied Computer Science Master's student at Warsaw University of Technology,
             striving to expand my knowledge and improve my skills in modern software development.
