@@ -30,7 +30,8 @@ body {
     box-sizing: border-box;
     min-height: 100vh;
     font-family: Quicksand, "Helvetica Neue", sans-serif;
-    color: white
+    color: white;
+    @apply bg-secondary;
 }
 
 .timeline {
@@ -94,9 +95,9 @@ body {
     border-radius: 6px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 880px) {
     .timeline::after {
-        left: 31px;
+        left: 28px;
     }
 
     .container {
